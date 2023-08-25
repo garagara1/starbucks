@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
     />
+    <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/main.css" />
 
     <!-- GSAP (애니메이션) -->
@@ -49,8 +50,7 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-    <!-- YOUTUBE (유튜브 영상 재생 및 제어)-->
-    <script defer src="./js/youtube.js"></script>
+
 
     <!-- ScorllMagic (스크롤을 통해 오브젝트가 화면에 표시되고 있는 감지)  -->
     <script
@@ -61,7 +61,11 @@
     ></script>
 
     <!-- MAIN.JS -->
+    <script defer src="/js/common.js"></script>
     <script defer src="/js/main.js"></script>
+    <!-- YOUTUBE (유튜브 영상 재생 및 제어)-->
+    <script defer src="./js/youtube.js"></script>
+
 
     <!-- <link rel="icon" href="./favicon.png" /> -->
 
@@ -81,14 +85,15 @@
     <!-- HEADER -->
     <header>
       <div class="inner">
-        <a hr ef="/" class="logo">
+        <a href="/" class="logo">
           <!-- 절대경로 : /(Slash) , / 앞에 도메인 주소 생략, / 뒤에는 index.html이 생략 -> "/"는 메인페이지(/index.html)로 이동한다는 의미-->
           <img src="/images/starbucks_logo.png" alt="STARBUCKS" />
         </a>
 
         <div class="sub-menu">
           <ul class="menu">
-            <li><a href="/signin">Sign In</a></li>
+            <!-- /signin : 도메인/signin/index.html 이 생략되어 있음 -->
+            <li><a href="/signin">Sign In</a></li>    
             <li><a href="javascript:void(0)">My Starbucks</a></li>
             <li><a href="javascript:void(0)">Customer Service & Ideas</a></li>
             <li><a href="javascript:void(0)">Find a store</a></li>
