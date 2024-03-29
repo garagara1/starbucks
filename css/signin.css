@@ -1,0 +1,92 @@
+.signin {
+    margin-top: 120px;
+    padding: 100px 0 150px;
+    background-image: url("../images/signin_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;  /* 스크롤시 요소와 스크롤 안되고 뷰포트에 고정됨 */
+    background-size:cover;     /* 뷰포트의 넓은 너비에 이미지가 맞춰짐 */
+}
+
+.signin h1 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.signin__card {
+    width: 500px;
+    margin: 0 auto;    /* 가로너비가 있으므로 좌우 마진이 auto이므로 가운데 정렬 가능 */
+    border-radius: 6px;
+    background-color: #f6f5f0;
+    /* x축 2px, y축 2px, 20px의 흐림(블러)처림  */
+    box-shadow: 2px 2px 20px rgba(0,0,0,.3);
+    color: #555;
+}
+
+.signin__card h2 {
+    padding: 30px;
+    font-size: 18px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+.signin__card h2 strong {
+    font-weight: 700;
+    color:#006633;
+}
+
+.signin__card form {
+    padding: 30px 22px;
+}
+.signin__card form input {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;  /* input 요소에 포커스 되었을때 주변에 생기는 파란색 선을 안보이게 함 */
+    box-sizing: border-box;  /* padding과 border를 사용해서 사용한 만큼 요소크기가 늘어나서 박스 사이징을 border-box로 설정하여 크기계산*/
+    font-size: 14px;
+}
+
+/* signin__card form 태그 내부에 대괄호는 속성 선택자에 해당 */
+.signin__card form [type="submit"] {
+    background-color: #006633;
+    border: none;
+    font-size: 20px;
+    color:#fff;
+    cursor: pointer;
+}
+
+.signin__card form p {
+    font-size: 12px;
+    color: #006633;
+    text-align: center;
+}
+
+/* actions가 flex container이고 그 actions 안에 들어있는 각각의 a가 flex item이 됨 */
+.signin__card .actions {
+    display: flex;
+    border-top : 1px solid #ddd
+    
+}
+.signin__card .actions a {
+    /* 기본너비가 0인 상황에서 flex-grow 요소의 증가너비가 1 비율이므로 각각의 a 태그는 가로너비가 1:1:1 임 */
+    flex-grow: 1;   
+    flex-basis: 0;
+    text-align: center;
+    color: #555;
+    padding: 20px;
+    font-size: 14px;
+    border-right: 1px solid #ddd;
+}
+/* a태그들 중에 last child 즉, 마지막 a 태그에 우측 테두리선을 사용하지 않겠다 */
+.signin__card .actions a:last-child {
+    border-right: none;
+}
+/* a태그에 가상 선택자 hover를 추가하여 마우스를 올리면 밑줄 추가 */
+.signin__card .actions a:hover {
+    text-decoration: underline;
+}

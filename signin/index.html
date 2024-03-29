@@ -11,6 +11,7 @@
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
     />
     <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/signin.css" />
 
 
     <!-- MAIN.JS -->
@@ -166,8 +167,31 @@
     </header>
 
     <!-- SIGNIN -->
-    <section class="singin">
+    <section class = "signin">
+      <h1>로그인</h1>
+      <div class="signin__card">
+        <h2>
+          <!-- strong 태그는 의미적으로는 강조하고자 하는 글자를 묶어주는 inline 요소 -->
+          <strong>Welcome!</strong> 스타벅스에 오신 것을 환영합니다.
+        </h2>
 
+        <!-- form 태그는 입력양식을 만드는 태그로 실제 로그인이 동작하도록 구현할 것이 아니므로 미구현-->
+        <!-- action 부분에는 form 태그에 입력하는 양식이 어떤 주소(예. 서버주소)로 데이터가 전송될 것인지에 대한 특정 주소를 입력 가능 -->
+        <form action="">  
+          <input type="text" placeholder="아이디를 입력하세요.">
+          <input type="password" placeholder="비밀번호를 입력하세요.">
+          <!-- input type이 submit이라는 것은 어떤 주소로 제출을 할 것인지에 대한 의사를 사용자에게 입력을 받는 것으로 하나의 버튼으로 만들어짐 -->
+          <input type="submit" value="로그인">
+          <p>* 비밀번호를 타 사이트와 같이 사용할 경우 도용 위험이 있으니, <br> 
+            정기적으로 비밀번호를 변경하세요!</p>
+        </form>
+
+        <div class="actions">
+          <a href="javascript:void(0)">회원가입</a>
+          <a href="javascript:void(0)">아이디 찾기</a>
+          <a href="javascript:void(0)">비밀번호 찾기</a>
+        </div>
+      </div>
     </section>
 
     <!-- FOOTER -->
